@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-import Book from '../public/book.jpg'
-=======
 import Book from '../../public/book.jpg'
->>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 
 export default function Banner() {
     return (
