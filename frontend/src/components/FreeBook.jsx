@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react'
-<<<<<<< HEAD
 import List from "../public/list.json";
-=======
-import List from "../../public/list.json";
->>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
