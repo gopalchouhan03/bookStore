@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+import { StrictMode } from 'react'
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'

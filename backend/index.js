@@ -15,6 +15,7 @@ app.use(express.json());
 dotenv.config();
 
 const PORT=process.env.PORT || 4000;
+<<<<<<< HEAD
 const URI = process.env.MONGO_URI;
 
 
@@ -34,6 +35,21 @@ mongoose.connect(URI)
   });
   
 
+=======
+const URI=process.env.MongoDBURI;
+
+// Connect MongoDB
+try{
+    mongoose.connect(URI,{
+      useNewUrlParser : true,
+      useUnifiedTopology: true
+    });
+    console.log("Connected to mongoDB");
+} catch (error) {
+  console.log("ERROR",error);
+}
+
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 // defining routes
 app.use("/book", bookRoute);
 

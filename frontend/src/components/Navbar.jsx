@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Login from './Login';
 import logout from './logout';
+<<<<<<< HEAD
 import { useAuth } from '../../context/AuthProvider';
 
 export default function Navbar() {
     const [authUser, setAuthUser] = useAuth();
+=======
+
+export default function Navbar() {
+    const [authUser, setAuthUser] = useAuth();
+    console.log(authUser);
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 
     //     const [ theme , setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
     //     const element = document.documentElement;
@@ -54,7 +61,11 @@ export default function Navbar() {
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
+<<<<<<< HEAD
                                     className="w-5 h-5"
+=======
+                                    className="h-5 w-5"
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor">
@@ -73,20 +84,35 @@ export default function Navbar() {
                         </div>
                         <a className="text-2xl font-bold cursor-pointer">book Store</a>
                     </div>
+<<<<<<< HEAD
                     <div className="space-x-3 navbar-end">
                         <div className="hidden navbar-center lg:flex">
                             <ul className="px-1 menu menu-horizontal">
+=======
+                    <div className="navbar-end space-x-3">
+                        <div className="navbar-center hidden lg:flex">
+                            <ul className="menu menu-horizontal px-1">
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                 {NavItem}
                             </ul>
                         </div>
                         <div className='hidden md:block'>
+<<<<<<< HEAD
                             <label className="flex items-center gap-2 px-3 py-2 border rounded-md ">
                                 <input type="text" className="outline-none grow" placeholder="Search" />
+=======
+                            <label className=" px-3 py-2 border rounded-md flex items-center gap-2">
+                                <input type="text" className="grow outline-none" placeholder="Search" />
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 16 16"
                                     fill="currentColor"
+<<<<<<< HEAD
                                     className="w-4 h-4 opacity-70">
+=======
+                                    className="h-4 w-4 opacity-70">
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                     <path
                                         fillRule="evenodd"
                                         d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
@@ -101,7 +127,11 @@ export default function Navbar() {
 
                                 {/* sun icon */}
                                 <svg
+<<<<<<< HEAD
                                     className="fill-current swap-off h-7 w-7"
+=======
+                                    className="swap-off h-7 w-7 fill-current"
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                 // onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -113,7 +143,11 @@ export default function Navbar() {
 
                                 {/* moon icon */}
                                 <svg
+<<<<<<< HEAD
                                     className="fill-current swap-on h-7 w-7"
+=======
+                                    className="swap-on h-7 w-7 fill-current"
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                 // onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -128,7 +162,11 @@ export default function Navbar() {
                         {
                             authUser ? (<logout />) : (
                                 <div className="">
+<<<<<<< HEAD
                                     <a className="px-3 py-2 ml-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800"
+=======
+                                    <a className="bg-black text-white rounded-md px-3 py-2 ml-2 cursor-pointer hover:bg-slate-800 duration-300"
+>>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
                                         onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a> <Login />
                                 </div>
                             )

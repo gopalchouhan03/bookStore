@@ -12,7 +12,6 @@ export default function AuthProvider({ children }) {
     <AuthContext.Provider value={[authUser, setAuthUser]}>
       {children}
     </AuthContext.Provider>
-  )
   );
 }
 
