@@ -15,41 +15,23 @@ app.use(express.json());
 dotenv.config();
 
 const PORT=process.env.PORT || 4000;
-<<<<<<< HEAD
 const URI = process.env.MONGO_URI;
 
 
 // Connect MongoDB
 if (!URI) {
-  console.error("❌ MONGO_URI is missing in .env file");
+  console.error("MongoDB URI is missing in .env file");
   process.exit(1);
 }
 
 mongoose.connect(URI)
   .then(() => {
-    console.log("✅ Connected to MongoDB");
+    console.log("Connected to MongoDB");
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection error:", err);
-    process.exit(1); // stop server if DB doesn’t connect
+    console.error("MongoDB connection error:", err);
+    process.exit(1);
   });
-  
-
-=======
-const URI=process.env.MongoDBURI;
-
-// Connect MongoDB
-try{
-    mongoose.connect(URI,{
-      useNewUrlParser : true,
-      useUnifiedTopology: true
-    });
-    console.log("Connected to mongoDB");
-} catch (error) {
-  console.log("ERROR",error);
-}
-
->>>>>>> 48926768c62aa40b4b9c7bb9275670814df4805c
 // defining routes
 app.use("/book", bookRoute);
 
