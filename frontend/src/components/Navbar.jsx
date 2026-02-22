@@ -39,16 +39,16 @@ export default function Navbar() {
 
     const NavItem =
         <>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/course'>Course</a></li>
-            <li><a>Contact</a></li>
-            <li><a>About</a></li>
+            <li><a href='/' className="px-3 py-2 rounded-md hover:bg-slate-100">Home</a></li>
+            <li><a href='/course' className="px-3 py-2 rounded-md hover:bg-slate-100">Course</a></li>
+            <li><a className="px-3 py-2 rounded-md hover:bg-slate-100">Contact</a></li>
+            <li><a className="px-3 py-2 rounded-md hover:bg-slate-100">About</a></li>
         </>
 
     return (
         <>
-            <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${sticky ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out" : ""}`}>
-                <div className="navbar">
+            <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${sticky ? "shadow-md bg-white/95 backdrop-blur-sm duration-300 transition-all ease-in-out" : "bg-white/40 backdrop-blur-sm"}`}>
+                <div className="flex items-center justify-between py-3 text-slate-800">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,17 +71,17 @@ export default function Navbar() {
                                 {NavItem}
                             </ul>
                         </div>
-                        <a className="text-2xl font-bold cursor-pointer">book Store</a>
+                        <a className="text-2xl font-bold tracking-tight cursor-pointer text-slate-900">BookStore</a>
                     </div>
-                    <div className="space-x-3 navbar-end">
-                        <div className="hidden navbar-center lg:flex">
-                            <ul className="px-1 menu menu-horizontal">
+                    <div className="flex items-center space-x-3">
+                        <div className="items-center hidden lg:flex">
+                            <ul className="flex space-x-2 text-slate-700">
                                 {NavItem}
                             </ul>
                         </div>
                         <div className='hidden md:block'>
-                            <label className="flex items-center gap-2 px-3 py-2 border rounded-md ">
-                                <input type="text" className="outline-none grow" placeholder="Search" />
+                            <label className="flex items-center gap-2 px-3 py-2 bg-white border rounded-md">
+                                <input type="text" className="bg-transparent outline-none grow" placeholder="Search" />
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 16 16"
@@ -128,7 +128,7 @@ export default function Navbar() {
                         {
                             authUser ? (<logout />) : (
                                 <div className="">
-                                    <a className="px-3 py-2 ml-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800"
+                                    <a className="px-3 py-2 ml-2 text-white duration-300 rounded-md cursor-pointer btn-accent"
                                         onClick={() => document.getElementById("my_modal_3").showModal()}>Login</a> <Login />
                                 </div>
                             )

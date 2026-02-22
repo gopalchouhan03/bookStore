@@ -11,7 +11,7 @@ function Login() {
             email:data.email,
             password:data.password,
         }
-        await axios.post("http://localhost:4001/user/login", userInfo)
+        await axios.post("https://bookstore-4cmg.onrender.com/user/login", userInfo)
         .then((res)=>{
             console.log(res.data);
             if(res.data){
@@ -59,7 +59,7 @@ function Login() {
                    </div>
                    
                    <div className='flex justify-around mt-4'>
-                    <button className='bg-pink-500 rounded-md px-3 py-1 text-white hover:bg-pink-700 duration-200'>
+                    <button className='btn-accent rounded-md px-3 py-1 text-white'>
                         Login
                     </button>
                     <p>Not registered ?<Link to='/signup' className='underline text-blue-500 cursor-pointer'>Signup</Link></p>

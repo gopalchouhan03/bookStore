@@ -7,3 +7,68 @@
 body{
     
 }
+
+:root{
+	--bg-start: #f8fafc;
+	--bg-end: #eef2ff;
+	/* Palette */
+	--primary: #4f46e5; /* indigo-600 */
+	--accent: #fb7185;  /* rose-400 */
+	--accent-2: #f97316; /* orange-500 for pop */
+	--muted: #64748b; /* slate-500 */
+	--card: #ffffff;
+}
+
+body{
+	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+	color: rgba(15,23,42,1);
+}
+
+.modern-card{
+	border-radius: 12px;
+}
+
+.glass {
+	background: rgba(255,255,255,0.6);
+	backdrop-filter: blur(6px);
+}
+
+.muted{ color: rgba(99,102,241,0.8); }
+
+/* Palette helpers */
+.text-accent{ color: var(--accent); }
+.text-primary{ color: var(--primary); }
+.text-muted{ color: var(--muted); }
+
+.btn-accent{
+	background: linear-gradient(90deg,var(--primary),var(--accent));
+	color: white;
+	padding: .5rem 1rem;
+	border-radius: .5rem;
+	box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+}
+.btn-accent:hover{ opacity: .95 }
+
+.bg-card{ background: var(--card); border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+
+/* Scrollbar styling: uses color-mix with currentColor for subtle themed thumb */
+* {
+	scrollbar-color: color-mix(in oklch, currentColor 35%, transparent) transparent;
+	scrollbar-width: thin;
+}
+
+/* WebKit browsers */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+	background: color-mix(in oklch, currentColor 35%, transparent);
+	border-radius: 9999px;
+	border: 3px solid transparent;
+	background-clip: padding-box;
+}
+
+/* Fallback for older browsers: use primary with low opacity */
+*::-webkit-scrollbar-thumb{ background: rgba(79,70,229,0.18); }
